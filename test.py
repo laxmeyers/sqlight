@@ -56,6 +56,9 @@ def AddClass():
     conn.execute(f"INSERT INTO Class (ID,NAME) \
       VALUES ({count}, '{name}')");
     conn.commit()
+    newClass = conn.execute("Select * from Class where Name = '{name}'")
+    for row in newClass:
+        print(row)
 
 def ChangeGrade():
     studentName = input("What is the name of the student you want to grade? ")
@@ -74,12 +77,13 @@ def ChangeGrade():
         all = conn.execute("SELECT * from Grade")
         count = 0
         for row in all: 
-            print(row[0])
+            # print("row", row[0])
             count += 1
         conn.execute(f'''Insert Into Grade (Id, ClassId, StudentId, Grade)\
                      Values ({count}, {classId}, {studentId}, '{grade}')''');
         conn.commit()
-    studentWithGrade = conn.execute(f'''Select s.Name, g.Grade from Student s join Grade g on g.StudentId = s.Id where s.Id = {studentId}''');
+    # print("class ID", classId)
+    studentWithGrade = conn.execute(f'''Select s.Name, g.Grade from Student s join Grade g on g.StudentId = s.Id where s.Id = {studentId} AND g.ClassID = {classId}''');
     for row in studentWithGrade:
         print(row)
         
