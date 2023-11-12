@@ -11,7 +11,7 @@ I wrote this software to improve my skills with SQL and know how I can apply it 
 
 [Github](https://github.com/laxmeyers/sqlight)
 
-[Software Demo Video](http://youtube.link.goes.here)
+[Software Demo Video](https://somup.com/c0XlfigbRZ)
 
 # Relational Database
 
