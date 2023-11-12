@@ -9,6 +9,8 @@ I wrote this software to improve my skills with SQL and know how I can apply it 
 
 {Provide a link to your YouTube demonstration. It should be a 4-5 minute demo of the software running, a walkthrough of the code, and a view of how created the Relational Database.}
 
+[Github](https://github.com/laxmeyers/sqlight)
+
 [Software Demo Video](http://youtube.link.goes.here)
 
 # Relational Database
@@ -34,6 +36,5 @@ I used python with SQLite3. This is kinda like mixing MySQL with python to be ab
 
 {Make a list of things that you need to fix, improve, and add in the future.}
 
-- Item 1
-- Item 2
-- Item 3
+- Add a view to look at the grade of a student in the class without needing to change it.
+- Add a better user interface with more direction of how to use the site
