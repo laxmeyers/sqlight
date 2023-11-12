@@ -11,15 +11,21 @@ print("opened Database successfully");
 #          Grade Text Not Null);''')
 
 def MainMenu():
-    select = input('''What would you like to do?\nChange 'Grade'
+    select = ""
+    while select != "Quit":
+        select = input('''What would you like to do?\nChange 'Grade'
 'Add' Student
-Add 'Class' ''')
-    if select == 'Add':
-        AddStudent()
-    if select == "Grade":
-        ChangeGrade()
-    if select == "Class":
-        AddClass()
+Add 'Class'
+'Quit' ''')
+        if select == 'Add':
+            AddStudent()
+        if select == "Grade":
+            ChangeGrade()
+        if select == "Class":
+            AddClass()
+    print("Thanks!")
+
+    
 
 def AddStudent():
     name = input("What is the students name? ")
